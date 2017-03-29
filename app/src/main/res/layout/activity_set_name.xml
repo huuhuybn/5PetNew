@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black_overlay"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <include layout="@layout/header" />
+
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="100dp"
+        android:src="@mipmap/ic_launcher" />
+
+
+    <com.dotplays.a5pet.view.VerdanaText5Pet
+        android:id="@+id/tv_intro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="16dp"
+        android:text="@string/name_your_tag" />
+
+
+    <com.dotplays.a5pet.view.EditText5Pet
+        android:id="@+id/et_name"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:hint="@string/name"
+        android:imeOptions="actionNext"
+        android:inputType="text" />
+
+    <com.dotplays.a5pet.view.Button5Pet
+        android:id="@+id/btn_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:text="@string/btn_next" />
+
+</LinearLayout>
