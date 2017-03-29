@@ -17,6 +17,7 @@ import java.util.Set;
 public class SharePrefManager {
 
     private static final String PREFERENCES_NAME = "_HUY_PREFERENCES_NAME";
+    private static final String IS_LOG = "ISLFODOD";
 
     private static SharePrefManager instance = null;
     private Context context;
@@ -248,5 +249,13 @@ public class SharePrefManager {
     public User getUser() {
         User user = new Gson().fromJson(getStringValue(USER), User.class);
         return user;
+    }
+
+    public void saveIsLogin() {
+        putBooleanValue(IS_LOG, true);
+    }
+
+    public boolean getIsLogin() {
+        return getBooleanValue(IS_LOG, false);
     }
 }

@@ -10,6 +10,7 @@ import com.dotplays.a5pet.R;
 import com.dotplays.a5pet.model.Pet;
 
 import java.util.List;
+import java.util.Random;
 
 /**
  * Created by MAC2015 on 3/16/17.
@@ -38,7 +39,8 @@ public class PetSearchAdapter extends RecyclerView.Adapter<PetSearchHolder> {
     public void onBindViewHolder(PetSearchHolder holder, int position) {
         holder.pet = pets.get(position);
         holder.tv_name.setText(holder.pet.getName());
-
+        Random random = new Random();
+        holder.tv_distance.setText(random.nextInt(1000) + "m");
     }
 
     @Override
